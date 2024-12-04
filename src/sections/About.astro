@@ -1,29 +1,48 @@
 ---
 import TextReveal from '@/components/TextReveal.astro'
+import { Image } from 'astro:assets';
+import ProjectOne from '@/images/1.webp'
 ---
 
 <section
   data-about
-  class="bg-dark-blue text-steel-blue py-40 lg:py-52 xl:py-60 px-8"
+  class="bg-dark text-steel-blue py-40 lg:py-52 xl:py-60 px-8 flex flex-col lg:flex-row items-center border-4 border-black items-center justify-center "
 >
-  <TextReveal
-    class="text-3xl lg:text-4xl 2xl:text-5xl font-serif font-semibold max-w-[30ch] leading-normal lg:leading-normal 2xl:leading-normal mx-auto"
-    color="bg-gradient-to-r from-white to-white text-white/50"
-  >
-    Hello, I'm Jordan Blake, a web developer specializing in crafting elegant
-    and efficient user interfaces. Explore my work below and discover how I
-    bring creativity to code.
-  </TextReveal>
+  <div class="fade-wrapper flex flex-col lg:flex-row items-center justify-center">
+    <div class="lg:w-1/3 lg:mr-8 mb-8 lg:mb-0">
+      <Image
+        id="marina"
+        src={ProjectOne}
+        alt="Imagen de Marina Moreno"
+        class="w-full h-auto border-8 border-black"
+      />
+    </div>
+
+    <TextReveal
+      class="text-center text-3xl lg:text-4xl 2xl:text-5xl font-serif font-semibold max-w-[30ch] leading-normal lg:leading-normal 2xl:leading-normal mx-auto"
+      color="bg-gradient-to-r from-black to-black text-black/90"
+    >
+      ¡Hola! Soy Marina Moreno y me dedico a la estética desde hace años. 
+      Si quieres lucir tu mejor versión, no dudes en contactar conmigo.
+    </TextReveal>
+  </div>
 </section>
+
 
 <script>
   import { DOMLoaded } from '../ts/events'
-  import { fadeOut } from '../ts/animations'
+  import { fadeIn } from '../ts/animations'
 
   DOMLoaded(() => {
     const trigger = document.querySelector('[data-about]') as HTMLElement
-    const target = trigger.querySelector('p') as HTMLElement
+    const target = trigger.querySelector('.fade-wrapper') as HTMLElement
 
-    fadeOut(trigger, target)
+    fadeIn(trigger, target)
   })
 </script>
+<style>
+  #marina {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
+</style>

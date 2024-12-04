@@ -1,9 +1,10 @@
 ---
 import Card from '@/components/Card.astro'
-import projectOne from '@/images/project-1.png'
-import projectTwo from '@/images/project-2.png'
-import projectThree from '@/images/project-3.png'
-import projectFour from '@/images/project-4.png'
+import projectOne from '@/images/5.webp'
+import projectTwo from '@/images/6.webp'
+import projectThree from '@/images/3.webp'
+import projectFour from '@/images/2.webp'
+import projectFive from '@/images/4.webp'
 ---
 
 <section
@@ -11,9 +12,9 @@ import projectFour from '@/images/project-4.png'
   class="flex flex-col gap-10 lg:gap-12 py-32 lg:pb-40 2xl:py-48 px-8 overflow-clip"
 >
   <h2
-    class="w-full max-w-2xl mx-auto text-dark-blue text-3xl lg:text-4xl 2xl:text-5xl text-center font-semibold"
+    class="w-full max-w-2xl mx-auto text-black text-3xl lg:text-4xl 2xl:text-5xl text-center font-semibold"
   >
-    Featured Projects
+    Mis clientas
   </h2>
 
   <div data-projects-wrapper class="w-full max-w-2xl mx-auto">
@@ -21,37 +22,46 @@ import projectFour from '@/images/project-4.png'
       <li>
         <Card
           image={projectOne}
-          title="Free Astro Components"
-          description="A set of reusable components designed to boost developer productivity and ensure high-quality, flexible, and customizable code."
-          link="https://free-astro-components.vercel.app/"
+          title="Manicura"
+          description="Embellece tus manos con una técnica profesional y detallada."
+          link="#"
         />
       </li>
       <li>
         <Card
           image={projectTwo}
-          title="E-commerce Dashboard"
-          description="A custom-built dashboard offering real-time analytics, inventory management, and sales tracking, showcasing my expertise in creating complex, data-driven applications."
+          title="Pedicura Rusa"
+          description="Disfruta de un cuidado único para tus pies con una pedicura rusa precisa y elegante."
           link="#"
         />
       </li>
       <li>
         <Card
           image={projectThree}
-          title="Blog Platform"
-          description="A lightweight blog platform built with modern frameworks, highlighting my ability to create scalable, maintainable, and user-friendly web applications."
+          title="Lifting y Pestañas"
+          description="Realza tu mirada con un lifting que aporta volumen y definición a tus pestañas."
           link="#"
         />
       </li>
       <li>
         <Card
           image={projectFour}
-          title="Interactive Data Visualization"
-          description="A tool that turns complex datasets into intuitive charts and graphs, demonstrating my skill in data-driven visualization and user engagement."
+          title="Diseño y Laminado de Cejas"
+          description="Define tus cejas con un diseño y laminado personalizado que resalta tu rostro."
+          link="#"
+        />
+      </li>
+      <li>
+        <Card
+          image={projectFive}
+          title="Maquillaje Profesional"
+          description="Luce un maquillaje profesional que se adapta a tu estilo y ocasión especial."
           link="#"
         />
       </li>
     </ul>
   </div>
+  
 </section>
 
 <script>
