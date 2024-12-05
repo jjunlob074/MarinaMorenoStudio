@@ -17,7 +17,10 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
     "gsap": "^3.12.5",
+    "postcss": "^8.4.49",
     "prettier": "^3.3.3"
   }
 }
